@@ -7,7 +7,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import NotFound from "./components/NotFound";
 import Layout from "./components/Layout";
-import axios from "axios";
+
 
 
 const App = () => {

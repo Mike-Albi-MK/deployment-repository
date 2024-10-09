@@ -4,6 +4,7 @@ import { recordsInitialState, recordsReducer } from "../reducers/recordReducer";
 import { usersInitialState, usersReducer } from "../reducers/userReducer";
 import { getMyData } from "../api/usersApi";
 import { getCartData } from "../api/cartsApi";
+import { getAllRecords } from "../api/recordsApi";
 import { setAxiosDefaults } from "../utils/axiosConfig";
 
 export const DataContext = createContext();
@@ -25,6 +26,7 @@ export const DataProvider = ({ children }) => {
 
   useEffect(() => {
     setAxiosDefaults();
+    getAllRecords(recordsDispatch);
     getMyData(usersDispatch);
   }, []);
 
